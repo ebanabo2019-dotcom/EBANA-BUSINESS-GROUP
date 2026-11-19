@@ -2,11 +2,11 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const EbanaBusinessApp());
+  runApp(const MyApp());
 }
 
-class EbanaBusinessApp extends StatelessWidget {
-  const EbanaBusinessApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,26 +15,25 @@ class EbanaBusinessApp extends StatelessWidget {
       title: 'EBANA BUSINESS GROUP',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF123B68),
+          seedColor: Colors.green,
         ),
         useMaterial3: true,
       ),
-      home: const HomePage(),
+      home: const MyHomePage(),
     );
   }
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF4F6F9),
       appBar: AppBar(
-        backgroundColor: const Color(0xFF123B68),
-        foregroundColor: Colors.white,
         title: const Text('EBANA BUSINESS GROUP'),
+        backgroundColor: Colors.green,
+        foregroundColor: Colors.white,
       ),
       body: Center(
         child: Padding(
@@ -44,29 +43,27 @@ class HomePage extends StatelessWidget {
             children: [
               const Icon(
                 Icons.business,
-                size: 90,
-                color: Color(0xFF123B68),
+                size: 80,
+                color: Colors.green,
               ),
               const SizedBox(height: 20),
               const Text(
-                'EBANA BUSINESS GROUP',
+                'Welcome to EBANA BUSINESS GROUP',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  fontSize: 25,
+                  fontSize: 22,
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 12),
               const Text(
-                'Business Management System',
+                'Your business management platform',
                 textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 16),
               ),
               const SizedBox(height: 30),
-              const Text(
-                'Daldala kee bakka tokko irraa bulchi!',
-                textAlign: TextAlign.center,
-                style: TextStyle(fontSize: 18),
+              ElevatedButton(
+                onPressed: () {},
+                child: const Text('Get Started'),
               ),
             ],
           ),

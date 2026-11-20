@@ -1,149 +1,291 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html lang="om">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#087b45">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>EBANA BUSINESS GROUP</title>
 <style>
-:root{--green:#087b45;--green2:#12a568;--ink:#17251e;--muted:#718078;--bg:#f3f7f4;--line:#e5ece7;--white:#fff;--gold:#f4b942;--shadow:0 10px 28px #173d2810}
-*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
-button,input,select{font:inherit}button{cursor:pointer;border:0}.top{background:linear-gradient(120deg,#075d35,#0c9b5d);color:#fff;padding:18px max(16px,calc((100% - 1180px)/2));display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}.brand{display:flex;gap:11px;align-items:center}.logo{width:43px;height:43px;border-radius:14px;background:#ffffff20;display:grid;place-items:center;font-size:24px}.brand h1{font-size:19px;margin:0;letter-spacing:.2px}.brand p{margin:3px 0 0;color:#d7f5e4;font-size:12px}.lang{display:flex;gap:5px;background:#ffffff20;padding:4px;border-radius:12px}.lang button{background:transparent;color:#fff;border-radius:8px;padding:8px 10px;font-size:12px}.lang button.active{background:#fff;color:var(--green);font-weight:800}
-.shell{max-width:1180px;margin:auto;padding:16px}.nav{display:flex;gap:8px;overflow:auto;padding:5px 0 14px;scrollbar-width:thin}.nav button{white-space:nowrap;background:#fff;border:1px solid var(--line);color:#52645a;padding:11px 14px;border-radius:12px;font-weight:700}.nav button.active{background:var(--green);color:#fff;border-color:var(--green)}
-.page{display:none}.page.active{display:block}.welcome{background:linear-gradient(120deg,#087b45,#13a66b);color:#fff;border-radius:20px;padding:24px;margin:2px 0 16px;box-shadow:var(--shadow);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}.welcome h2{font-size:23px;margin:0 0 6px}.welcome p{margin:0;color:#e2f8eb;max-width:600px}.welcome .mark{font-size:58px;opacity:.9}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.stat,.panel,.product{background:#fff;border:1px solid var(--line);border-radius:17px;box-shadow:var(--shadow)}.stat{padding:16px}.stat .ico{font-size:22px}.stat .label{color:var(--muted);font-size:12px;margin-top:8px}.stat strong{font-size:23px;display:block;margin-top:3px}.stat small{color:var(--green);font-weight:700}.cols{display:grid;grid-template-columns:1.25fr .75fr;gap:14px;margin-top:14px}.panel{padding:17px;margin-bottom:14px}.panel h3{margin:0 0 14px;font-size:16px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}.muted{color:var(--muted);font-size:13px}.bars{height:150px;display:flex;align-items:end;gap:10px;padding:12px 4px 0;border-bottom:1px solid var(--line)}.bar{flex:1;min-width:12px;background:linear-gradient(#24bb7c,#087b45);border-radius:8px 8px 2px 2px;position:relative}.bar span{position:absolute;bottom:-23px;left:50%;transform:translateX(-50%);font-size:11px;color:var(--muted)}
-.quick{display:grid;grid-template-columns:repeat(2,1fr);gap:9px}.quick button,.primary{background:var(--green);color:#fff;padding:12px 14px;border-radius:11px;font-weight:750}.quick button:nth-child(2){background:#eaf6ef;color:var(--green)}.quick button:nth-child(3){background:#fff4dc;color:#8b5b00}.quick button:nth-child(4){background:#edf2ff;color:#3658a8}
-.products{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.product{overflow:hidden}.product .pic{height:118px;background:linear-gradient(135deg,#e9f7ee,#d7eee1);display:grid;place-items:center;font-size:42px}.product .body{padding:13px}.product h4{margin:0 0 5px}.price{font-weight:850;color:var(--green);font-size:17px}.stock{font-size:12px;color:var(--muted);margin:5px 0 10px}.product .primary{width:100%;padding:10px}
-.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}.field{display:grid;gap:5px;margin:9px 0}.field label{font-size:12px;color:var(--muted);font-weight:700}.field input,.field select{width:100%;padding:12px;border:1px solid #dce6df;border-radius:10px;background:#fff;outline:none}.field input:focus,.field select:focus{border-color:var(--green);box-shadow:0 0 0 3px #087b4515}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}.formgrid .full{grid-column:1/-1}
-.tablewrap{overflow:auto}table{border-collapse:collapse;width:100%;min-width:510px}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid var(--line);font-size:13px}th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px}.pill{display:inline-block;padding:4px 8px;border-radius:20px;background:#eaf6ef;color:var(--green);font-size:11px;font-weight:800}.empty{padding:22px;text-align:center;color:var(--muted);background:#f8faf8;border-radius:12px}.danger{background:#fff0ee;color:#b33b2e;padding:7px 9px;border-radius:8px}.secondary{background:#eaf6ef;color:var(--green);padding:9px 11px;border-radius:9px;font-weight:700}.note{background:#fff8e8;color:#76520b;border:1px solid #f3e4bb;padding:12px;border-radius:12px;font-size:12px;margin-top:12px}.notice{position:sticky;top:8px;z-index:4;background:#e7f8ee;border:1px solid #bfe8ce;color:#12633b;padding:11px 14px;border-radius:11px;margin-bottom:12px;display:none}.hide{display:none!important}footer{text-align:center;padding:25px;color:var(--muted);font-size:12px}
-@media(max-width:760px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.cols{grid-template-columns:1fr}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.welcome{padding:20px}.welcome h2{font-size:20px}.welcome .mark{font-size:42px}}
-@media(max-width:420px){.shell{padding:11px}.products{grid-template-columns:1fr 1fr;gap:8px}.product .pic{height:90px}.product .body{padding:10px}.stat{padding:12px}.stat strong{font-size:19px}.formgrid{grid-template-columns:1fr}.formgrid .full{grid-column:auto}.lang button{padding:7px 8px}}
+:root{--primary:#125b45;--dark:#123b30;--light:#f3f7f5}
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:var(--light);color:#24332d}
+header{background:var(--dark);color:white;padding:18px 15px;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+header h2{margin:0;font-size:20px}
+button,select,input,textarea{font:inherit}
+button{border:0;border-radius:7px;padding:10px 14px;background:var(--primary);color:white;cursor:pointer}
+button:hover{opacity:.9}
+button.danger{background:#b83232}
+nav{display:flex;gap:7px;flex-wrap:wrap;padding:12px;background:white;box-shadow:0 2px 5px #ddd}
+nav button{background:#e7efeb;color:var(--dark)}
+nav button.active{background:var(--primary);color:white}
+main{max-width:1100px;margin:auto;padding:16px}
+.panel,.card{background:white;border-radius:10px;padding:16px;margin-bottom:15px;box-shadow:0 2px 8px #0000000b}
+h2,h3{color:var(--dark)}
+input,select,textarea{width:100%;padding:11px;border:1px solid #ccd8d1;border-radius:7px;margin:6px 0 12px;background:white}
+label{font-weight:bold;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.product{border:1px solid #e1e8e4;border-radius:9px;padding:14px;background:white}
+.price{font-size:19px;font-weight:bold;color:var(--primary)}
+.hidden{display:none!important}
+.notice{padding:12px;border-radius:7px;background:#fff4d6;margin:10px 0}
+.success{background:#e0f5e8}
+footer{text-align:center;padding:25px;color:#718078}
 </style>
 </head>
 <body>
-<header class="top">
- <div class="brand"><div class="logo">🟢</div><div><h1>EBANA BUSINESS GROUP</h1><p data-t="tagline">Waltajjii daldalaa fi delivery</p></div></div>
- <div class="lang"><button data-lang="om" class="active">Oromoo</button><button data-lang="am">አማርኛ</button><button data-lang="en">English</button></div>
+<header>
+  <div><h2>EBANA BUSINESS GROUP</h2><small id="tagline">Daldala keenya gara fuulduraatti</small></div>
+  <div>
+    <select id="language" style="width:auto;margin:0">
+      <option value="om">Afaan Oromoo</option><option value="am">አማርኛ</option><option value="en">English</option>
+    </select>
+    <button id="loginOpen">Admin Login</button>
+    <button id="logoutBtn" class="danger hidden">Logout</button>
+  </div>
 </header>
-<div class="shell">
- <nav class="nav">
-  <button class="active" data-page="home" data-t="dashboard">📊 Dashboard</button>
-  <button data-page="shop" data-t="shop">🛍️ Shop</button>
-  <button data-page="inventory" data-t="inventory">📦 Inventory</button>
-  <button data-page="sales" data-t="sales">💳 Sales</button>
-  <button data-page="orders" data-t="orders">🧾 Orders</button>
-  <button data-page="customers" data-t="customers">👥 Customers</button>
-  <button data-page="admin" data-t="admin">⚙️ Admin</button>
- </nav>
- <div id="notice" class="notice" role="status"></div>
-
- <section id="home" class="page active">
-  <div class="welcome"><div><h2 data-t="welcome">Baga nagaan dhuftan, EBANA!</h2><p data-t="intro">Daldala kee bakka tokko irraa bulchi; meeshaalee, gurgurtaa fi ajaja hordofi.</p></div><div class="mark">📈</div></div>
+<nav id="navigation">
+  <button class="active" data-page="home">Home</button>
+  <button data-page="shop">Shop</button>
+  <button data-page="login" id="adminNav">Admin Login</button>
+  <button data-page="dashboard" class="admin-tab hidden">Dashboard</button>
+  <button data-page="products" class="admin-tab hidden">Inventory</button>
+  <button data-page="orders" class="admin-tab hidden">Orders</button>
+  <button data-page="sales" class="admin-tab hidden">Sales</button>
+  <button data-page="customers" class="admin-tab hidden">Customers</button>
+</nav>
+<main>
+<div id="message"></div>
+<section id="home" class="page">
+  <div class="panel">
+    <h1>Welcome to EBANA BUSINESS GROUP</h1>
+    <p id="welcomeText">Baga gara EBANA BUSINESS GROUP dhuftan. Meeshaalee keenya ilaalaa, ajaja keessanis galmeessaa.</p>
+    <button onclick="showPage('shop')">Shop Now</button>
+  </div>
+  <div class="panel"><h2>Our Business</h2><p>Quality products and reliable service.</p></div>
+</section>
+<section id="shop" class="page hidden"><h2>Shop / Meeshaalee</h2><div id="shopList" class="grid">Meeshaaleen fe'amaa jiru...</div></section>
+<section id="login" class="page hidden">
+  <div class="panel" style="max-width:430px;margin:25px auto">
+    <h2>Admin Login</h2><p>Admin email fi password kee galchi.</p>
+    <form id="loginForm">
+      <label>Email</label><input id="email" type="email" required autocomplete="username">
+      <label>Password</label><input id="password" type="password" required autocomplete="current-password">
+      <button type="submit">Seeni / Login</button>
+    </form>
+  </div>
+</section>
+<section id="dashboard" class="page hidden">
+  <h2>Admin Dashboard</h2>
   <div class="grid">
-   <div class="stat"><div class="ico">💰</div><div class="label" data-t="totalSales">Gurgurtaa waliigalaa</div><strong id="statSales">0 ETB</strong><small data-t="allTime">Galmee gurgurtaa</small></div>
-   <div class="stat"><div class="ico">📦</div><div class="label" data-t="productsCount">Meeshaalee</div><strong id="statProducts">0</strong><small data-t="inStock">Inventory keessatti</small></div>
-   <div class="stat"><div class="ico">🧾</div><div class="label" data-t="pendingOrders">Ajaja eegaa jiru</div><strong id="statOrders">0</strong><small data-t="needsAction">Hordoffii barbaada</small></div>
-   <div class="stat"><div class="ico">⚠️</div><div class="label" data-t="lowStock">Stock xiqqaa</div><strong id="statLow">0</strong><small data-t="checkStock">Ilaaluu barbaachisa</small></div>
+    <div class="card"><h3>Products</h3><h2 id="countProducts">0</h2></div>
+    <div class="card"><h3>Orders</h3><h2 id="countOrders">0</h2></div>
+    <div class="card"><h3>Sales</h3><h2 id="countSales">0</h2></div>
+    <div class="card"><h3>Total Sales</h3><h2 id="totalSales">0</h2></div>
   </div>
-  <div class="cols">
-   <div class="panel"><h3 data-t="salesOverview">📊 Cuunfaa gurgurtaa</h3><div class="bars" id="salesBars"><div class="empty" style="width:100%">No sales yet</div></div><p class="muted" data-t="chartHint">Gurgurtaa galmeessuun chart kana guuta.</p></div>
-   <div class="panel"><h3 data-t="quickActions">⚡ Tarkaanfii saffisaa</h3><div class="quick"><button onclick="go('inventory')" data-t="addProduct">+ Meeshaa dabal</button><button onclick="go('sales')" data-t="recordSale">Gurgurtaa galmeessi</button><button onclick="go('orders')" data-t="viewOrders">Ajaja ilaali</button><button onclick="go('shop')" data-t="openShop">Shop bani</button></div><div class="note" data-t="localNote">Hubachiisa: kun prototype dha. Odeeffannoon bilbila/browser kana keessatti qofa kuufama; amma database waliin hin hidhamne.</div></div>
+</section>
+<section id="products" class="page hidden">
+  <h2>Inventory / Meeshaalee</h2>
+  <div class="panel"><h3>Meeshaa haaraa galmeessi</h3>
+    <form id="productForm">
+      <label>Maqaa meeshaa</label><input id="productName" required maxlength="100">
+      <label>Gatii (Birr)</label><input id="productPrice" type="number" min="0.01" step="0.01" required>
+      <label>Baay'ina</label><input id="productStock" type="number" min="0" step="1" required>
+      <label>Ibsa meeshaa</label><textarea id="productDescription" maxlength="500"></textarea>
+      <button type="submit">Save Product</button>
+    </form>
   </div>
- </section>
-
- <section id="shop" class="page">
-  <div class="panel"><div class="panel-head"><div><h3 data-t="onlineShop">🛍️ Meeshaalee keenya</h3><p class="muted" data-t="shopSub">Meeshaa filadhu; ajaja kee galchi.</p></div><input id="shopSearch" placeholder="Search..." style="max-width:210px;padding:10px;border:1px solid var(--line);border-radius:10px" oninput="renderShop()"></div><div id="shopProducts" class="products"></div></div>
- </section>
-
- <section id="inventory" class="page">
-  <div class="panel"><h3 data-t="addNewProduct">📦 Meeshaa haaraa galmeessi</h3>
-   <div class="formgrid">
-    <div class="field"><label data-t="productName">Maqaa meeshaa</label><input id="pName" placeholder="Product name"></div>
-    <div class="field"><label data-t="category">Gosa</label><input id="pCategory" placeholder="Category"></div>
-    <div class="field"><label data-t="price">Gatii (ETB)</label><input id="pPrice" type="number" min="0" step="0.01" placeholder="0"></div>
-    <div class="field"><label data-t="stock">Baay'ina stock</label><input id="pStock" type="number" min="0" step="1" placeholder="0"></div>
-   </div><button class="primary" onclick="addProduct()" data-t="saveProduct">Meeshaa olkaa'i</button>
+  <div id="inventoryList"></div>
+</section>
+<section id="orders" class="page hidden"><h2>Customer Orders</h2><div id="ordersList"></div></section>
+<section id="sales" class="page hidden">
+  <h2>Sales</h2>
+  <div class="panel"><h3>Gurgurtaa galmeessi</h3>
+    <form id="saleForm">
+      <label>Meeshaa</label><select id="saleProduct" required></select>
+      <label>Baay'ina gurgurame</label><input id="saleQuantity" type="number" min="1" step="1" required>
+      <button type="submit">Record Sale</button>
+    </form>
   </div>
-  <div class="panel"><div class="panel-head"><h3 data-t="inventoryList">📋 Tarree meeshaalee</h3><span class="pill" id="inventoryCount">0</span></div><div id="inventoryList"></div></div>
- </section>
+  <div id="salesList"></div>
+</section>
+<section id="customers" class="page hidden"><h2>Customers</h2><div id="customersList"></div></section>
+</main>
+<footer>© 2026 EBANA BUSINESS GROUP</footer>
+<script type="module">
+import {initializeApp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-app.js";
+import {getAuth,signInWithEmailAndPassword,signOut,onAuthStateChanged} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-auth.js";
+import {getFirestore,collection,addDoc,getDocs,doc,getDoc,updateDoc,deleteDoc,query,orderBy,serverTimestamp} from "https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore.js";
 
- <section id="sales" class="page">
-  <div class="panel"><h3 data-t="recordNewSale">💳 Gurgurtaa haaraa galmeessi</h3>
-   <div class="formgrid">
-    <div class="field"><label data-t="customerName">Maqaa maamilaa</label><input id="saleCustomer" placeholder="Customer name"></div>
-    <div class="field"><label data-t="selectProduct">Meeshaa filadhu</label><select id="saleProduct"></select></div>
-    <div class="field"><label data-t="quantity">Baay'ina</label><input id="saleQty" type="number" min="1" value="1"></div>
-    <div class="field"><label data-t="salePrice">Gatii tokkoo (ETB)</label><input id="salePrice" type="number" min="0" step="0.01"></div>
-   </div><button class="primary" onclick="recordSale()" data-t="saveSale">Gurgurtaa galmeessi</button>
-  </div>
-  <div class="panel"><h3 data-t="salesHistory">📋 Seenaa gurgurtaa</h3><div id="salesList"></div></div>
- </section>
-
- <section id="orders" class="page">
-  <div class="panel"><h3 data-t="newCustomerOrder">🧾 Ajaja maamilaa</h3>
-   <div class="formgrid">
-    <div class="field"><label data-t="customerName">Maqaa maamilaa</label><input id="oName" placeholder="Full name"></div>
-    <div class="field"><label data-t="phone">Lakkoofsa bilbilaa</label><input id="oPhone" type="tel" placeholder="09..."></div>
-    <div class="field"><label data-t="selectProduct">Meeshaa filadhu</label><select id="oProduct"></select></div>
-    <div class="field"><label data-t="quantity">Baay'ina</label><input id="oQty" type="number" min="1" value="1"></div>
-    <div class="field full"><label data-t="address">Teessoo / bakka delivery</label><input id="oAddress" placeholder="Delivery address"></div>
-   </div><button class="primary" onclick="placeOrder()" data-t="sendOrder">Ajaja ergi</button>
-  </div>
-  <div class="panel"><h3 data-t="ordersHistory">📋 Ajaja galmaa'e</h3><div id="ordersList"></div></div>
- </section>
-
- <section id="customers" class="page">
-  <div class="panel"><h3 data-t="customerDirectory">👥 Maamiltoota</h3><div id="customerList"></div></div>
- </section>
-
- <section id="admin" class="page">
-  <div class="panel"><h3 data-t="adminTools">⚙️ Bulchiinsa</h3><p class="muted" data-t="adminInfo">Fuulli kun meeshaalee, gurgurtaa fi ajaja bulchuuf qophaa'eera.</p>
-   <button class="secondary" onclick="exportData()" data-t="export">⬇️ Data buufadhu (backup)</button>
-   <button class="danger" onclick="clearDemo()" data-t="clearDemo">Demo data haqi</button>
-   <div class="note" data-t="securityNote">Hubachiisa nageenyaa: Admin login/permission fi database shared hin ijaaramin. Odeeffannoo dhugaa maamilaa asitti hin kuusin hanga Firebase fi nageenyi itti dabalamanitti.</div>
-  </div>
- </section>
-</div>
-<footer>© 2026 EBANA BUSINESS GROUP · <span data-t="footer">Daldala kee guddifadhu</span></footer>
-
-<script>
-const T={
-om:{tagline:"Waltajjii daldalaa fi tajaajila delivery",dashboard:"📊 Dashboard",shop:"🛍️ Shop",inventory:"📦 Inventory",sales:"💳 Gurgurtaa",orders:"🧾 Ajaja",customers:"👥 Maamiltoota",admin:"⚙️ Admin",welcome:"Baga nagaan dhuftan, EBANA!",intro:"Daldala kee bakka tokko irraa bulchi; meeshaalee, gurgurtaa fi ajaja hordofi.",totalSales:"Gurgurtaa waliigalaa",allTime:"Galmee gurgurtaa",productsCount:"Meeshaalee",inStock:"Inventory keessatti",pendingOrders:"Ajaja eegaa jiru",needsAction:"Hordoffii barbaada",lowStock:"Stock xiqqaa",checkStock:"Ilaaluu barbaachisa",salesOverview:"📊 Cuunfaa gurgurtaa",chartHint:"Gurgurtaa galmeessuun chart kana guuta.",quickActions:"⚡ Tarkaanfii saffisaa",addProduct:"+ Meeshaa dabal",recordSale:"Gurgurtaa galmeessi",viewOrders:"Ajaja ilaali",openShop:"Shop bani",localNote:"Hubachiisa: kun prototype dha. Odeeffannoon bilbila/browser kana keessatti qofa kuufama; amma database waliin hin hidhamne.",onlineShop:"🛍️ Meeshaalee keenya",shopSub:"Meeshaa filadhu; ajaja kee galchi.",addNewProduct:"📦 Meeshaa haaraa galmeessi",productName:"Maqaa meeshaa",category:"Gosa",price:"Gatii (ETB)",stock:"Baay'ina stock",saveProduct:"Meeshaa olkaa'i",inventoryList:"📋 Tarree meeshaalee",recordNewSale:"💳 Gurgurtaa haaraa galmeessi",customerName:"Maqaa maamilaa",selectProduct:"Meeshaa filadhu",quantity:"Baay'ina",salePrice:"Gatii tokkoo (ETB)",saveSale:"Gurgurtaa galmeessi",salesHistory:"📋 Seenaa gurgurtaa",newCustomerOrder:"🧾 Ajaja maamilaa",phone:"Lakkoofsa bilbilaa",address:"Teessoo / bakka delivery",sendOrder:"Ajaja ergi",ordersHistory:"📋 Ajaja galmaa'e",customerDirectory:"👥 Maamiltoota",adminTools:"⚙️ Bulchiinsa",adminInfo:"Fuulli kun meeshaalee, gurgurtaa fi ajaja bulchuuf qophaa'eera.",export:"⬇️ Data buufadhu (backup)",clearDemo:"Demo data haqi",securityNote:"Hubachiisa nageenyaa: Admin login/permission fi database shared hin ijaaramin. Odeeffannoo dhugaa maamilaa asitti hin kuusin hanga Firebase fi nageenyi itti dabalamanitti.",footer:"Daldala kee guddifadhu",emptyProducts:"Meeshaan hin jiru. Admin irraa meeshaa dabal.",emptySales:"Gurgurtaan hin galmoofne.",emptyOrders:"Ajajni hin jiru.",emptyCustomers:"Maamilaan hin galmoofne.",added:"Meeshaan galmaa'eera.",saleSaved:"Gurgurtaan galmaa'eera.",orderSaved:"Ajajni galmaa'eera.",fill:"Maaloo odeeffannoo barbaachisu guuti.",noStock:"Stock gahaan hin jiru.",delete:"Haqi",status:"Haala",date:"Guyyaa",total:"Waliigala",name:"Maqaa",item:"Meeshaa",actions:"Gocha",search:"Barbaadi...",choose:"Meeshaa filadhu",outStock:"Stock hin jiru",low:"Xiqqaa",available:"Jira",ordered:"Haaraa",completed:"Xumurame",markDone:"Xumurame godhi",removed:"Haqameera",backupDone:"Backup qophaa'eera."},
-am:{tagline:"የንግድ እና የዴሊቨሪ መድረክ",dashboard:"📊 ዳሽቦርድ",shop:"🛍️ ሱቅ",inventory:"📦 እቃ ክምችት",sales:"💳 ሽያጭ",orders:"🧾 ትዕዛዞች",customers:"👥 ደንበኞች",admin:"⚙️ አስተዳደር",welcome:"እንኳን ወደ EBANA በደህና መጡ!",intro:"ንግድዎን ከአንድ ቦታ ያስተዳድሩ፤ እቃዎችን፣ ሽያጭን እና ትዕዛዞችን ይከታተሉ።",totalSales:"ጠቅላላ ሽያጭ",allTime:"የሽያጭ መዝገብ",productsCount:"እቃዎች",inStock:"በክምችት ውስጥ",pendingOrders:"የሚጠበቁ ትዕዛዞች",needsAction:"ክትትል ያስፈልጋል",lowStock:"ዝቅተኛ ክምችት",checkStock:"መፈተሽ ያስፈልጋል",salesOverview:"📊 የሽያጭ ማጠቃለያ",chartHint:"ሽያጭ ሲመዘገብ ግራፉ ይሞላል።",quickActions:"⚡ ፈጣን እርምጃዎች",addProduct:"+ እቃ ጨምር",recordSale:"ሽያጭ መዝግብ",viewOrders:"ትዕዛዞችን እይ",openShop:"ሱቅ ክፈት",localNote:"ማስታወሻ፦ ይህ የመጀመሪያ ሙከራ ነው። መረጃው በዚህ ስልክ/ብራውዘር ውስጥ ብቻ ይቀመጣል፤ ከዳታቤዝ ጋር አልተገናኘም።",onlineShop:"🛍️ የእቃ ሱቃችን",shopSub:"እቃ ይምረጡና ትዕዛዝ ያስገቡ።",addNewProduct:"📦 አዲስ እቃ ይመዝግቡ",productName:"የእቃ ስም",category:"ዓይነት",price:"ዋጋ (ብር)",stock:"የክምችት ብዛት",saveProduct:"እቃውን አስቀምጥ",inventoryList:"📋 የእቃ ዝርዝር",recordNewSale:"💳 አዲስ ሽያጭ መዝግብ",customerName:"የደንበኛ ስም",selectProduct:"እቃ ይምረጡ",quantity:"ብዛት",salePrice:"የአንዱ ዋጋ (ብር)",saveSale:"ሽያጩን መዝግብ",salesHistory:"📋 የሽያጭ ታሪክ",newCustomerOrder:"🧾 የደንበኛ ትዕዛዝ",phone:"ስልክ ቁጥር",address:"አድራሻ / የዴሊቨሪ ቦታ",sendOrder:"ትዕዛዝ ላክ",ordersHistory:"📋 የተመዘገቡ ትዕዛዞች",customerDirectory:"👥 ደንበኞች",adminTools:"⚙️ አስተዳደር",adminInfo:"ይህ ገጽ እቃዎችን፣ ሽያጭን እና ትዕዛዞችን ለማስተዳደር ነው።",export:"⬇️ መረጃ አውርድ (backup)",clearDemo:"የሙከራ መረጃ አጥፋ",securityNote:"የደህንነት ማስታወሻ፦ የአድሚን መግቢያ/ፈቃድ እና የጋራ ዳታቤዝ ገና አልተዘጋጁም። Firebase እና ደህንነት እስኪጨመሩ ድረስ የእውነተኛ ደንበኛ መረጃ አታስገቡ።",footer:"ንግድዎን ያሳድጉ",emptyProducts:"እቃ የለም። ከአስተዳዳሪ እቃ ይጨምሩ።",emptySales:"ሽያጭ አልተመዘገበም።",emptyOrders:"ትዕዛዝ የለም።",emptyCustomers:"ደንበኛ አልተመዘገበም።",added:"እቃው ተመዝግቧል።",saleSaved:"ሽያጩ ተመዝግቧል።",orderSaved:"ትዕዛዙ ተመዝግቧል።",fill:"እባክዎ አስፈላጊውን መረጃ ይሙሉ።",noStock:"በቂ ክምችት የለም።",delete:"ሰርዝ",status:"ሁኔታ",date:"ቀን",total:"ጠቅላላ",name:"ስም",item:"እቃ",actions:"ተግባር",search:"ፈልግ...",choose:"እቃ ይምረጡ",outStock:"ክምችት የለም",low:"ዝቅተኛ",available:"አለ",ordered:"አዲስ",completed:"ተጠናቋል",markDone:"ተጠናቋል ብለህ ምልክት አድርግ",removed:"ተሰርዟል",backupDone:"Backup ተዘጋጅቷል።"},
-en:{tagline:"Business and delivery platform",dashboard:"📊 Dashboard",shop:"🛍️ Shop",inventory:"📦 Inventory",sales:"💳 Sales",orders:"🧾 Orders",customers:"👥 Customers",admin:"⚙️ Admin",welcome:"Welcome to EBANA!",intro:"Manage your business in one place; track products, sales and orders.",totalSales:"Total sales",allTime:"Recorded sales",productsCount:"Products",inStock:"In inventory",pendingOrders:"Pending orders",needsAction:"Needs follow-up",lowStock:"Low stock",checkStock:"Needs attention",salesOverview:"📊 Sales overview",chartHint:"Record sales to populate this chart.",quickActions:"⚡ Quick actions",addProduct:"+ Add product",recordSale:"Record a sale",viewOrders:"View orders",openShop:"Open shop",localNote:"Note: This is a prototype. Data is stored only in this phone/browser; it is not connected to a database yet.",onlineShop:"🛍️ Our products",shopSub:"Choose a product and place an order.",addNewProduct:"📦 Add a new product",productName:"Product name",category:"Category",price:"Price (ETB)",stock:"Stock quantity",saveProduct:"Save product",inventoryList:"📋 Product inventory",recordNewSale:"💳 Record a new sale",customerName:"Customer name",selectProduct:"Select product",quantity:"Quantity",salePrice:"Unit price (ETB)",saveSale:"Save sale",salesHistory:"📋 Sales history",newCustomerOrder:"🧾 Customer order",phone:"Phone number",address:"Address / delivery location",sendOrder:"Send order",ordersHistory:"📋 Orders received",customerDirectory:"👥 Customers",adminTools:"⚙️ Administration",adminInfo:"Use this area to manage products, sales and orders.",export:"⬇️ Export data (backup)",clearDemo:"Clear demo data",securityNote:"Security note: Admin login/permissions and a shared database are not implemented yet. Do not enter real customer information until Firebase and security are added.",footer:"Grow your business",emptyProducts:"No products yet. Add products from Inventory.",emptySales:"No sales recorded yet.",emptyOrders:"No orders yet.",emptyCustomers:"No customers recorded yet.",added:"Product saved.",saleSaved:"Sale recorded.",orderSaved:"Order received.",fill:"Please complete the required fields.",noStock:"Not enough stock available.",delete:"Delete",status:"Status",date:"Date",total:"Total",name:"Name",item:"Product",actions:"Actions",search:"Search...",choose:"Choose a product",outStock:"Out of stock",low:"Low",available:"Available",ordered:"New",completed:"Completed",markDone:"Mark completed",removed:"Deleted",backupDone:"Backup file is ready."}
+const firebaseConfig={
+ apiKey:"AIzaSyAJmAoQex3bxEMQk699fn2FWdZqFUIC5aA",
+ authDomain:"ebana-business-group.firebaseapp.com",
+ projectId:"ebana-business-group",
+ storageBucket:"ebana-business-group.firebasestorage.app",
+ messagingSenderId:"1020201500693",
+ appId:"1:1020201500693:web:52267e25066ac5fe6f8e1c",
+ measurementId:"G-K9GYYBS6M3"
 };
-let lang=localStorage.getItem("ebana_language")||"om";
-const get=(k)=>T[lang]?.[k]||T.om[k]||k;
-const read=(key,old=[])=>{try{return JSON.parse(localStorage.getItem(key))||old}catch{return old}};
-let products=read("ebana_products").map((p,i)=>({...p,id:p.id||"p"+i,category:p.category||"",stock:Number(p.stock??0),price:Number(p.price||0)}));
-let orders=read("ebana_orders").map((o,i)=>({...o,id:o.id||"o"+i,status:o.status||"new"}));
-let sales=read("ebana_sales");
-function save(){localStorage.setItem("ebana_products",JSON.stringify(products));localStorage.setItem("ebana_orders",JSON.stringify(orders));localStorage.setItem("ebana_sales",JSON.stringify(sales))}
-function esc(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
-function money(n){return Number(n||0).toLocaleString(undefined,{maximumFractionDigits:2})+" ETB"}
-function msg(s){let n=document.getElementById("notice");n.textContent=s;n.style.display="block";setTimeout(()=>n.style.display="none",3200)}
-function setLanguage(l){lang=l;localStorage.setItem("ebana_language",l);document.documentElement.lang=l;document.querySelectorAll("[data-t]").forEach(e=>e.textContent=get(e.dataset.t));document.querySelectorAll("[data-lang]").forEach(b=>b.classList.toggle("active",b.dataset.lang===l));renderAll()}
-document.querySelectorAll("[data-lang]").forEach(b=>b.addEventListener("click",()=>setLanguage(b.dataset.lang)));
-function go(id){document.querySelectorAll(".page").forEach(p=>p.classList.toggle("active",p.id===id));document.querySelectorAll("[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===id));window.scrollTo({top:0,behavior:"smooth"});if(id==="sales"||id==="orders")fillSelects()}
-document.querySelectorAll("[data-page]").forEach(b=>b.addEventListener("click",()=>go(b.dataset.page)));
-function addProduct(){let name=pName.value.trim(),category=pCategory.value.trim(),price=Number(pPrice.value),stock=Number(pStock.value);if(!name||pPrice.value===""||pStock.value===""||price<0||stock<0){msg(get("fill"));return}products.push({id:"p"+Date.now(),name,category,price,stock});save();pName.value=pCategory.value=pPrice.value=pStock.value="";renderAll();msg(get("added"))}
-function renderShop(){let q=(shopSearch.value||"").toLowerCase(),list=products.filter(p=>(p.name+" "+p.category).toLowerCase().includes(q));shopProducts.innerHTML=list.length?list.map(p=>`<article class="product"><div class="pic">🛍️</div><div class="body"><h4>${esc(p.name)}</h4><div class="muted">${esc(p.category||"EBANA")}</div><div class="price">${money(p.price)}</div><div class="stock">${p.stock>0?get("available")+": "+p.stock:get("outStock")}</div><button class="primary" ${p.stock<1?"disabled":""} onclick="startOrder('${esc(p.id)}')">${get("sendOrder")}</button></div></article>`).join(""):`<div class="empty" style="grid-column:1/-1">${get("emptyProducts")}</div>`}
-function startOrder(id){go("orders");fillSelects();oProduct.value=id}
-function fillSelects(){let opts=`<option value="">${get("choose")}</option>`+products.map(p=>`<option value="${esc(p.id)}">${esc(p.name)} — ${money(p.price)} (${p.stock})</option>`).join("");saleProduct.innerHTML=opts;oProduct.innerHTML=opts;saleProduct.onchange=()=>{let p=products.find(x=>x.id===saleProduct.value);salePrice.value=p?.price??""}}
-function renderInventory(){inventoryCount.textContent=products.length;inventoryList.innerHTML=products.length?`<div class="tablewrap"><table><thead><tr><th>${get("name")}</th><th>${get("category")}</th><th>${get("price")}</th><th>${get("stock")}</th><th>${get("actions")}</th></tr></thead><tbody>${products.map(p=>`<tr><td><b>${esc(p.name)}</b></td><td>${esc(p.category||"—")}</td><td>${money(p.price)}</td><td><span class="pill">${p.stock}</span></td><td><button class="danger" onclick="deleteProduct('${esc(p.id)}')">${get("delete")}</button></td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">${get("emptyProducts")}</div>`}
-function deleteProduct(id){if(!confirm(get("delete")+"?"))return;products=products.filter(p=>p.id!==id);save();renderAll();msg(get("removed"))}
-function recordSale(){let p=products.find(x=>x.id===saleProduct.value),qty=Number(saleQty.value),price=Number(salePrice.value);if(!p||!qty||qty<1||price<0||salePrice.value===""){msg(get("fill"));return}if(p.stock<qty){msg(get("noStock"));return}p.stock-=qty;sales.unshift({id:"s"+Date.now(),customer:saleCustomer.value.trim(),item:p.name,qty,price,total:qty*price,date:new Date().toLocaleString()});save();saleCustomer.value="";saleQty.value=1;salePrice.value="";fillSelects();renderAll();msg(get("saleSaved"))}
-function placeOrder(){let name=oName.value.trim(),phone=oPhone.value.trim(),p=products.find(x=>x.id===oProduct.value),qty=Number(oQty.value),address=oAddress.value.trim();if(!name||!phone||!p||!qty||qty<1||!address){msg(get("fill"));return}orders.unshift({id:"o"+Date.now(),name,phone,item:p.name,productId:p.id,qty,address,date:new Date().toLocaleString(),status:"new"});save();oName.value=oPhone.value=oAddress.value="";oQty.value=1;renderAll();msg(get("orderSaved"))}
-function completeOrder(id){let o=orders.find(x=>x.id===id);if(!o||o.status==="completed")return;let p=products.find(x=>x.id===o.productId);if(p&&p.stock>=Number(o.qty))p.stock-=Number(o.qty);o.status="completed";save();renderAll()}
-function renderOrders(){ordersList.innerHTML=orders.length?`<div class="tablewrap"><table><thead><tr><th>${get("name")}</th><th>${get("item")}</th><th>${get("quantity")}</th><th>${get("phone")}</th><th>${get("status")}</th><th>${get("actions")}</th></tr></thead><tbody>${orders.map(o=>`<tr><td>${esc(o.name)}</td><td>${esc(o.item)}</td><td>${esc(o.qty)}</td><td>${esc(o.phone)}</td><td><span class="pill">${o.status==="completed"?get("completed"):get("ordered")}</span></td><td>${o.status!=="completed"?`<button class="secondary" onclick="completeOrder('${esc(o.id)}')">✓</button>`:"—"}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">${get("emptyOrders")}</div>`}
-function renderSales(){salesList.innerHTML=sales.length?`<div class="tablewrap"><table><thead><tr><th>${get("date")}</th><th>${get("name")}</th><th>${get("item")}</th><th>${get("quantity")}</th><th>${get("total")}</th></tr></thead><tbody>${sales.map(s=>`<tr><td>${esc(s.date)}</td><td>${esc(s.customer||"—")}</td><td>${esc(s.item)}</td><td>${esc(s.qty)}</td><td><b>${money(s.total)}</b></td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">${get("emptySales")}</div>`}
-function renderCustomers(){let map=new Map();orders.forEach(o=>map.set(o.phone,{name:o.name,phone:o.phone}));sales.forEach(s=>{if(s.customer)map.set(s.customer,{name:s.customer,phone:"—"})});let a=[...map.values()];customerList.innerHTML=a.length?`<div class="tablewrap"><table><thead><tr><th>${get("name")}</th><th>${get("phone")}</th></tr></thead><tbody>${a.map(c=>`<tr><td>${esc(c.name)}</td><td>${esc(c.phone)}</td></tr>`).join("")}</tbody></table></div>`:`<div class="empty">${get("emptyCustomers")}</div>`}
-function renderDashboard(){let total=sales.reduce((a,s)=>a+Number(s.total||0),0);statSales.textContent=money(total);statProducts.textContent=products.length;statOrders.textContent=orders.filter(o=>o.status!=="completed").length;statLow.textContent=products.filter(p=>p.stock<=5).length;let recent=sales.slice(0,7).reverse();salesBars.innerHTML=recent.length?recent.map((s,i)=>`<div class="bar" style="height:${Math.max(10,Math.min(100,(Number(s.total)/(Math.max(...recent.map(x=>Number(x.total)||0))||1))*100))}%"><span>${i+1}</span></div>`).join(""):`<div class="empty" style="width:100%">${get("emptySales")}</div>`}
-function renderAll(){renderDashboard();renderShop();renderInventory();renderOrders();renderSales();renderCustomers();fillSelects()}
-function exportData(){let data={products,orders,sales,exportedAt:new Date().toISOString()};let a=document.createElement("a"),url=URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:"application/json"}));a.href=url;a.download="ebana-business-backup.json";a.click();URL.revokeObjectURL(url);msg(get("backupDone"))}
-function clearDemo(){if(!confirm(get("clearDemo")+"?"))return;products=[];orders=[];sales=[];save();renderAll();msg(get("removed"))}
-setLanguage(lang);renderAll();
+const app=initializeApp(firebaseConfig),auth=getAuth(app),db=getFirestore(app);
+let isAdmin=false,products=[],orders=[],sales=[];
+const $=id=>document.getElementById(id);
+
+function message(t,good=false){$("message").textContent=t;$("message").className=good?"notice success":"notice";window.scrollTo({top:0,behavior:"smooth"});}
+window.showPage=page=>{
+ if(["dashboard","products","orders","sales","customers"].includes(page)&&!isAdmin)page="login";
+ document.querySelectorAll(".page").forEach(x=>x.classList.add("hidden"));
+ $(page)?.classList.remove("hidden");
+ document.querySelectorAll("nav button[data-page]").forEach(b=>b.classList.toggle("active",b.dataset.page===page));
+};
+document.querySelectorAll("nav button[data-page]").forEach(b=>b.addEventListener("click",()=>showPage(b.dataset.page)));
+$("loginOpen").onclick=()=>showPage("login");
+
+$("loginForm").addEventListener("submit",async e=>{
+ e.preventDefault();
+ try{await signInWithEmailAndPassword(auth,$("email").value.trim(),$("password").value);}
+ catch(err){message("Login hin milko: "+authError(err.code));}
+});
+function authError(code){
+ const errors={"auth/invalid-credential":"Email ykn password sirrii miti.","auth/user-not-found":"Admin account hin jiru.","auth/wrong-password":"Password sirrii miti.","auth/too-many-requests":"Yaaliin baay'ate. Booda irra deebi'i.","auth/network-request-failed":"Internet kee ilaali."};
+ return errors[code]||"Rakkoo login: "+code;
+}
+$("logoutBtn").onclick=()=>signOut(auth);
+
+onAuthStateChanged(auth,async user=>{
+ isAdmin=false;
+ if(user){
+  try{
+   const a=await getDoc(doc(db,"admins",user.uid));
+   if(a.exists()&&a.data().active===true&&a.data().role==="admin")isAdmin=true;
+   else{await signOut(auth);message("Account kanaaf hayyamni admin hin jiru.");return;}
+  }catch(err){message("Admin mirkaneessuu hin dandeenye: "+err.message);await signOut(auth);return;}
+ }
+ updateAccess();await loadProducts();
+ if(isAdmin)await loadAdminData();
+ showPage(isAdmin?"dashboard":"home");
+});
+function updateAccess(){
+ document.querySelectorAll(".admin-tab").forEach(x=>x.classList.toggle("hidden",!isAdmin));
+ $("logoutBtn").classList.toggle("hidden",!isAdmin);
+ $("loginOpen").classList.toggle("hidden",isAdmin);
+ $("adminNav").classList.toggle("hidden",isAdmin);
+}
+async function loadProducts(){
+ try{
+  const snap=await getDocs(collection(db,"products"));
+  products=snap.docs.map(d=>({id:d.id,...d.data()}));
+  renderShop();if(isAdmin)renderInventory();fillSaleProducts();
+ }catch(err){$("shopList").textContent="Meeshaalee argachuu hin dandeenye: "+err.message;}
+}
+function renderShop(){
+ const root=$("shopList");root.replaceChildren();
+ if(!products.length){root.textContent="Ammaaf meeshaan hin galmoofne.";return;}
+ products.forEach(p=>{
+  const c=document.createElement("div");c.className="product";
+  const h=document.createElement("h3");h.textContent=p.name||"";
+  const d=document.createElement("p");d.textContent=p.description||"";
+  const price=document.createElement("div");price.className="price";price.textContent=Number(p.price||0).toLocaleString()+" Birr";
+  const stock=document.createElement("p");stock.textContent="Stock: "+Number(p.stock||0);
+  const b=document.createElement("button");b.textContent="Order / Ajaja";b.disabled=Number(p.stock||0)<1;b.onclick=()=>orderProduct(p.id);
+  c.append(h,d,price,stock,b);root.append(c);
+ });
+}
+async function orderProduct(id){
+ const p=products.find(x=>x.id===id);if(!p)return;
+ const name=prompt("Maqaa keessan galchaa:");if(!name||!name.trim())return;
+ const phone=prompt("Lakkoofsa bilbilaa keessan galchaa:");if(!phone||!phone.trim())return;
+ const qty=Number(prompt("Baay'ina barbaaddan galchaa:"));
+ if(!Number.isInteger(qty)||qty<1||qty>Number(p.stock||0)){message("Baay'inni galchitan sirrii miti ykn stock hin jiru.");return;}
+ try{
+  await addDoc(collection(db,"orders"),{customerName:name.trim().slice(0,100),phone:phone.trim().slice(0,30),productId:p.id,productName:String(p.name).slice(0,100),quantity:qty,unitPrice:Number(p.price),total:qty*Number(p.price),status:"New",createdAt:serverTimestamp()});
+  message("Ajajni keessan milkaa'inaan ergame. Galatoomaa!",true);
+ }catch(err){message("Ajaja erguu hin dandeenye: "+err.message);}
+}
+function renderInventory(){
+ const root=$("inventoryList");root.replaceChildren();
+ products.forEach(p=>{
+  const c=document.createElement("div");c.className="card";
+  const h=document.createElement("h3");h.textContent=p.name||"";
+  const d=document.createElement("p");d.textContent=`Gatii: ${p.price} Birr | Stock: ${p.stock}`;
+  const b=document.createElement("button");b.className="danger";b.textContent="Delete";b.onclick=()=>removeProduct(p.id);
+  c.append(h,d,b);root.append(c);
+ });
+}
+$("productForm").addEventListener("submit",async e=>{
+ e.preventDefault();if(!isAdmin)return;
+ try{
+  await addDoc(collection(db,"products"),{name:$("productName").value.trim(),price:Number($("productPrice").value),stock:Number($("productStock").value),description:$("productDescription").value.trim(),createdAt:serverTimestamp()});
+  e.target.reset();await loadProducts();await loadAdminData();message("Meeshaan galmaa'eera.",true);
+ }catch(err){message("Meeshaa galmeessuu hin dandeenye: "+err.message);}
+});
+async function removeProduct(id){
+ if(!isAdmin||!confirm("Meeshaa kana haquu barbaaddaa?"))return;
+ try{await deleteDoc(doc(db,"products",id));await loadProducts();await loadAdminData();message("Meeshaan haqameera.",true);}
+ catch(err){message(err.message);}
+}
+async function loadAdminData(){
+ if(!isAdmin)return;
+ try{
+  const [o,s]=await Promise.all([getDocs(query(collection(db,"orders"),orderBy("createdAt","desc"))),getDocs(query(collection(db,"sales"),orderBy("createdAt","desc")))]);
+  orders=o.docs.map(d=>({id:d.id,...d.data()}));sales=s.docs.map(d=>({id:d.id,...d.data()}));
+  renderOrders();renderSales();renderCustomers();renderDashboard();fillSaleProducts();
+ }catch(err){message("Admin data argachuu hin dandeenye: "+err.message);}
+}
+function renderDashboard(){
+ $("countProducts").textContent=products.length;$("countOrders").textContent=orders.length;$("countSales").textContent=sales.length;
+ $("totalSales").textContent=sales.reduce((n,s)=>n+Number(s.total||0),0).toLocaleString()+" Birr";
+}
+function renderOrders(){
+ const root=$("ordersList");root.replaceChildren();
+ if(!orders.length){root.textContent="Ajajni hin jiru.";return;}
+ orders.forEach(o=>{
+  const c=document.createElement("div");c.className="card";
+  const p=document.createElement("p");p.textContent=`${o.customerName} | ${o.phone} | ${o.productName} | ${o.quantity} | ${o.total} Birr | ${o.status}`;
+  const done=document.createElement("button");done.textContent="Complete";done.onclick=()=>completeOrder(o.id);
+  const del=document.createElement("button");del.className="danger";del.style.marginLeft="8px";del.textContent="Delete";del.onclick=()=>deleteOrder(o.id);
+  c.append(p,done,del);root.append(c);
+ });
+}
+async function completeOrder(id){
+ if(!isAdmin)return;
+ try{await updateDoc(doc(db,"orders",id),{status:"Completed"});await loadAdminData();message("Ajajni xumurameera.",true);}
+ catch(err){message(err.message);}
+}
+async function deleteOrder(id){
+ if(!isAdmin||!confirm("Ajaja kana haquu barbaaddaa?"))return;
+ try{await deleteDoc(doc(db,"orders",id));await loadAdminData();message("Ajajni haqameera.",true);}
+ catch(err){message(err.message);}
+}
+function fillSaleProducts(){
+ const s=$("saleProduct");s.replaceChildren();
+ products.forEach(p=>{const o=document.createElement("option");o.value=p.id;o.textContent=`${p.name} (Stock ${p.stock})`;s.append(o);});
+}
+$("saleForm").addEventListener("submit",async e=>{
+ e.preventDefault();if(!isAdmin)return;
+ const p=products.find(x=>x.id===$("saleProduct").value),qty=Number($("saleQuantity").value);
+ if(!p||!Number.isInteger(qty)||qty<1||qty>Number(p.stock||0)){message("Meeshaa ykn baay'inni sirrii miti.");return;}
+ try{
+  await addDoc(collection(db,"sales"),{productId:p.id,productName:p.name,quantity:qty,unitPrice:Number(p.price),total:qty*Number(p.price),createdAt:serverTimestamp()});
+  await updateDoc(doc(db,"products",p.id),{stock:Number(p.stock)-qty});
+  e.target.reset();await loadProducts();await loadAdminData();message("Gurgurtaan galmaa'eera.",true);
+ }catch(err){message("Gurgurtaa galmeessuu hin dandeenye: "+err.message);}
+});
+function renderSales(){
+ const root=$("salesList");root.replaceChildren();
+ sales.forEach(s=>{const p=document.createElement("div");p.className="card";p.textContent=`${s.productName} | ${s.quantity} | ${s.total} Birr`;root.append(p);});
+}
+function renderCustomers(){
+ const root=$("customersList");root.replaceChildren();const map=new Map();
+ orders.forEach(o=>{const k=o.phone||o.customerName;if(!map.has(k))map.set(k,o);});
+ if(!map.size){root.textContent="Maamiltoonni hin jiran.";return;}
+ map.forEach(c=>{const p=document.createElement("div");p.className="card";p.textContent=`${c.customerName} | ${c.phone}`;root.append(p);});
+}
+const translations={
+ om:{tag:"Daldala keenya gara fuulduraatti",welcome:"Baga gara EBANA BUSINESS GROUP dhuftan. Meeshaalee keenya ilaalaa, ajaja keessanis galmeessaa."},
+ am:{tag:"ንግዳችንን ወደፊት",welcome:"ወደ EBANA BUSINESS GROUP እንኳን በደህና መጡ። ምርቶቻችንን ይመልከቱ እና ትዕዛዝ ያስገቡ።"},
+ en:{tag:"Moving our business forward",welcome:"Welcome to EBANA BUSINESS GROUP. Browse our products and place your order."}
+};
+$("language").value=localStorage.getItem("ebana_language")||"om";
+function setLanguage(lang){localStorage.setItem("ebana_language",lang);$("tagline").textContent=translations[lang].tag;$("welcomeText").textContent=translations[lang].welcome;}
+$("language").addEventListener("change",e=>setLanguage(e.target.value));setLanguage($("language").value);
 </script>
 </body>
 </html>
